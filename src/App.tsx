@@ -6,6 +6,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AppSidebar } from "@/components/AppSidebar";
 import Index from "./pages/Index";
+import Faturamento from "./pages/Faturamento";
+import Tributos from "./pages/Tributos";
+import NotasFiscais from "./pages/NotasFiscais";
+import Indicadores from "./pages/Indicadores";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +37,10 @@ const App = () => (
               <main className="flex-1 p-6">
                 <Routes>
                   <Route path="/" element={<Index />} />
+                  <Route path="/faturamento" element={<Faturamento />} />
+                  <Route path="/tributos" element={<Tributos />} />
+                  <Route path="/notas-fiscais" element={<NotasFiscais />} />
+                  <Route path="/indicadores" element={<Indicadores />} />
                   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                   <Route path="*" element={<NotFound />} />
                 </Routes>
